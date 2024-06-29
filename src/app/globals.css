@@ -9,8 +9,15 @@
   transition: all 0.2s linear;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("/Aquarium.jpg") center/cover no-repeat fixed;
+}
+
 header {
-  background: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,4 +27,180 @@ header {
   width: 100%;
   padding: 1.2rem 7rem;
   z-index: 99;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.form-box h2 {
+  font-size: 2rem;
+  color: #4b91c7;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 0.1rem solid #162938;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #4b91c7;
+  font-weight: 500;
+  pointer-events: none;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 1rem;
+  color: #4b91c7;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 0.5rem;
+  font-size: 1.2rem;
+  color: #4b91c7;
+  line-height: 3.5rem;
+}
+
+.remember-forget {
+  font-size: 0.9rem;
+  color: #4b91c7;
+  font-weight: 500;
+  margin: -1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-forget label input {
+  accent-color: #4b91c7;
+  margin-right: 3px;
+}
+.remember-forget a {
+  color: #4b91c7;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #4b91c7;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+.login-register {
+  font-size: 0.9rem;
+  color: #4b91c7;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: #4b91c7;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #4b91c7;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 1.2rem;
+  cursor: pointer;
+  z-index: 1;
 }
